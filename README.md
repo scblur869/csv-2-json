@@ -17,9 +17,10 @@ Single Endpoint
 
 ```bash
 POST   /api/v1/upload
+multipart/form-data;
 ```
 
-multi-part ( file )
+
 
 ### example
 
@@ -38,6 +39,8 @@ multi-part ( file )
 "vbb124btr","Game Controller","Electronics","2"
 "cm230f032","Gaming Set","Electronics","63"
 ```
+
+### JSON response
 
 ```json
 {
