@@ -1,23 +1,24 @@
 # CSV 2 JSON
-## This is just a simple API written in GO that reads a standard CSV file with the first row as a the header.
 
-### once read, an http json response is sent back to the client with the CSV data in json format. One of the beauties of Go is the use map[string]interface{} or just the ability to use an empty interface for arbitrary data.
+## This is just a simple API written in GO that reads a standard CSV file with the first row as a the header
+
+### once read, an http json response is sent back to the client with the CSV data in json format. One of the beauties of Go is the use map[string]interface{} or just the ability to use an empty interface for arbitrary data
 
 you can just hold everything in a simple struct
 
 ```go
 type CSVData struct {
-	Header []string                 `json:"header"`
-	Rows   []map[string]interface{} `json:"data"`
+ Header []string                 `json:"header"`
+ Rows   []map[string]interface{} `json:"data"`
 }
 ```
-
 
 Single Endpoint
 
 ```bash
 POST   /api/v1/upload
 ```
+
 multi-part ( file )
 
 ### example
@@ -37,8 +38,6 @@ multi-part ( file )
 "vbb124btr","Game Controller","Electronics","2"
 "cm230f032","Gaming Set","Electronics","63"
 ````
-
-
 
 ```json
 {
