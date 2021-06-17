@@ -35,6 +35,7 @@ func HandleUpload(ctx *gin.Context) {
 		return
 	}
 	csvData.Header = records[0]
+	fmt.Println(csvData.Header)
 	for x := 1; x < len(records); x++ {
 		row := make(map[string]interface{})
 		for y := 0; y < len(records[0]); y++ {
